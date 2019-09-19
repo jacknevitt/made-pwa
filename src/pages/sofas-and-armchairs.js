@@ -44,7 +44,7 @@ export const query = graphql`
   query {
     elastigraph {
       tag(store: GB, url: "sofas-and-armchairs") {
-        products {
+        products(first: 250) {
           edges {
             node {
               images {
