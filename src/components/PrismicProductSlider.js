@@ -8,7 +8,7 @@ const SliderContainer = styled.div`
 `
 
 const CardContainer = styled.div`
-  height: 15em;
+  height: 70 px;
   margin: 0.5em;
 `
 
