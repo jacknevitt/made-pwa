@@ -15,7 +15,7 @@ module.exports = {
       resolve: "gatsby-source-graphql",
       options: {
         typeName: "MADE",
-        fieldName: "sofa",
+        fieldName: "elastigraph",
         url: "https://es-elastigraph.made.com/graphql",
       },
     },
