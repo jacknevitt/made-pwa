@@ -5,9 +5,9 @@ module.exports = {
   //   author: `@gatsbyjs`,
   // },
   siteMetadata: {
-    title: "My Homepage",
-    description: "This is where I write my thoughts.",
-    author: `hhhh`,
+    title: `MADE.COM`,
+    description: `Discover our range of furniture and homeware combining design and affordability. From design sofa to table and lighting create your own space with MADE.com`,
+    author: `MADE.COM`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
