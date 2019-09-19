@@ -153,7 +153,7 @@ class Header extends React.Component {
             <MenuTitle>MENU</MenuTitle>
           </MenuTitleContainer>
           <MenuItemContainer>
-            <MenuItem to="/page-2/">SOFAS</MenuItem>
+            <MenuItem to="/sofas-and-armchairs/">SOFAS</MenuItem>
             <Icon characterCode={"e901"} />
           </MenuItemContainer>
         </MenuModalContainer>
