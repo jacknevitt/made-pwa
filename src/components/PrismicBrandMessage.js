@@ -1,11 +1,41 @@
 import React from "react"
 import styled from "styled-components"
 
-const PrismicBrandMessage = ({ main_title: title, content_text: textBody }) => (
-  <div>
-    <h1> {title.text}</h1>
-    <p>{textBody.text}</p>
-  </div>
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-image: ${prop => `url(${prop.img})`};
+  height: ${prop => `${prop.height}px`};
+  width: ${prop => `${prop.width}px`};
+`
+const StyledTitle = styled.h1`
+  margin-top: 2em;
+  flex: 1;
+  width: 100%;
+  color: white;
+  text-align: center;
+`
+
+const StyledContentBody = styled.p`
+  flex: 3;
+  width: 100%;
+  color: white;
+  text-align: center;
+`
+
+const PrismicBrandMessage = ({
+  main_title: title,
+  content_text: textBody,
+  background_image_desktop,
+}) => (
+  <Container
+    img={background_image_desktop.url}
+    height={background_image_desktop.dimensions.height}
+    wifth={background_image_desktop.dimensions.width}
+  >
+    <StyledTitle> {title.text}</StyledTitle>
+    <StyledContentBody>{textBody.text}</StyledContentBody>
+  </Container>
 )
 
 export default PrismicBrandMessage

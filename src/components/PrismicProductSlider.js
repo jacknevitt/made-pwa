@@ -9,9 +9,11 @@ const SliderContainer = styled.div`
 
 const CardContainer = styled.div`
   height: 15em;
+  margin: 0.5em;
 `
 
 class PrismicProductSlider extends Component {
+  // we need to fetch product info by sku
   render() {
     return (
       <SliderContainer>
@@ -27,6 +29,7 @@ export default PrismicProductSlider
 
 const ProductCard = ({ title }) => (
   <CardContainer>
+    <img src="https://placedog.net/640/480?random" />
     <p>{title}</p>
   </CardContainer>
 )
