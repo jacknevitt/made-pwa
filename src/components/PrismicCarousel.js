@@ -1,5 +1,4 @@
 import React from "react"
-import PrismicCarouselCard from "./PrismicCarouselCard"
 
 const PrismicCarousel = ({ items }) => (
   <div>
@@ -13,3 +12,5 @@ const PrismicCarousel = ({ items }) => (
 )
 
 export default PrismicCarousel
+
+const PrismicCarouselCard = ({ title }) => <div>{title}</div>
