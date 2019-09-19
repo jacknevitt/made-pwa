@@ -1,11 +1,24 @@
 module.exports = {
+  // siteMetadata: {
+  //   title: `Gatsby Default Starter`,
+  //   description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+  //   author: `@gatsbyjs`,
+  // },
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: "My Homepage",
+    description: "This is where I write my thoughts.",
+    author: `hhhh`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "MADE",
+        fieldName: "sofa",
+        url: "https://es-elastigraph.made.com/graphql",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
