@@ -1,42 +1,58 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import styled from 'styled-components';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
+const MenuModalContainer = styled.div`
+width: 80vw;
+height: 100vh;
+top: 0;
+background-color: green;
+position: absolute;
+z-index: 999;
+left: ${p => p.modalIsOpen ? '0' : '-100vw'};
+`;
+
+const MenuModalCloseButton = styled.button`
+position: absolute;
+top: 0;
+left: ${p => p.modalIsOpen ? '80vw' : '100vw'};
+`;
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      modalIsOpen: false,
+    }
+  }
+
+  render() {
+
+
+    return (
+      <>
+      <header
+        style={{
+          background: `rebeccapurple`,
+          marginBottom: `1.45rem`,
+        }}
+      >
+        <div
           style={{
-            color: `white`,
-            textDecoration: `none`,
+            margin: `0 auto`,
+            maxWidth: 960,
+            padding: `1.45rem 1.0875rem`,
           }}
         >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+        </div>
+      </header>
+        <MenuModalContainer modalIsOpen={this.state.modalIsOpen}>
+              <MenuModalCloseButton onClick={() => this.setState({modalIsOpen: !this.state.modalIsOpen})} modalIsOpen={this.state.modalIsOpen}>Menu</MenuModalCloseButton>
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+        </MenuModalContainer>
+      </>
+    );
+  }
 }
 
 export default Header
