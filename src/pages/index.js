@@ -1,18 +1,18 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import PrismicCarousel from "../components/PrismicCarousel"
-import PrismicProductSlider from "../components/PrismicProductSlider"
-import PrismicBrandMessage from "../components/PrismicBrandMessage"
-import InfoBar from "../components/InfoBar"
+import Layout from "../components/layout";
+import Image from "../components/image";
+import SEO from "../components/seo";
+import PrismicCarousel from "../components/PrismicCarousel";
+import PrismicProductSlider from "../components/PrismicProductSlider";
+import PrismicBrandMessage from "../components/PrismicBrandMessage";
+import InfoBar from "../components/InfoBar";
 
-import { graphql } from "gatsby"
+import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => {
-  console.log(data)
+  console.log(data);
   return (
     <Layout>
       <SEO title="Home" />
@@ -29,11 +29,12 @@ const IndexPage = ({ data }) => {
         <Image />
       </div>
       <Link to="/page-2/">Go to page 2</Link>
+      <Link to="/sofas-and-armchairs/"> Sofas and Armchairs</Link>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const GatsbyQuery = graphql`
   query PrismicCarousel {
@@ -132,4 +133,4 @@ export const GatsbyQuery = graphql`
       }
     }
   }
-`
+`;

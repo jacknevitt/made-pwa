@@ -8,9 +8,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { createGlobalStyle } from "styled-components"
+import NerudaTTF from "../fonts/FSNerudaWeb-Black.ttf"
+import NerudaWOFF from "../fonts/FSNerudaWeb-Black.woff"
 import Header from "./header"
 import "./layout.css"
+
+const GlobalStyle = createGlobalStyle`
+@font-face {
+  font-family: 'Neruda';
+  src: url('${NerudaWOFF}'); /* IE9 Compat Modes */
+  src: local('Made-icomoon'),
+       url('${NerudaWOFF}') format('woff'), /* Modern Browsers */
+       url('${NerudaTTF}') format('truetype'), /* Safari, Android, iOS */
+}
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,6 +37,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
