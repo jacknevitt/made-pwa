@@ -135,7 +135,9 @@ class Header extends React.Component {
       <HeaderContainer>
         <HeaderIconsContainer>
           <MadeLogo src={madeLogo} style={{ marginLeft: "35vw" }} />
-          <BasketIcon characterCode={"e907"} />
+          <Link to="/cart">
+            <BasketIcon characterCode={"e907"} />
+          </Link>
         </HeaderIconsContainer>
         <SearchInputContainer>
           <Icon characterCode={"e900"} />
