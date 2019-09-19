@@ -18,7 +18,7 @@ class PrismicProductSlider extends Component {
     return (
       <SliderContainer>
         {this.props.items.map(item => (
-          <ProductCard title={item.display_name} />
+          <ProductCard key={item.sku} title={item.display_name} />
         ))}
       </SliderContainer>
     )
