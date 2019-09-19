@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `standalone`,
-        icon: `src/images/MADE-SCREWHEAD-RGB.png`, // This path is relative to the root of the site.
+        icon: `src/images/MADE-SCREWHEAD-RGB-fill-white.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
