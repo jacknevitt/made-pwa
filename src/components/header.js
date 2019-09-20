@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import posed from "react-pose"
 import styled from "styled-components"
-import madeLogo from "../images/MADE-LOGO-RGB_black.jpg"
+import madeLogo from "../images/MADE-logo.svg"
 import Icon from "./icon"
 
 const HeaderContainer = styled.div`
