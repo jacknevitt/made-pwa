@@ -11,7 +11,6 @@ import InfoBar from "../components/InfoBar"
 import { graphql } from "gatsby"
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   const props = {
     ...data.prismicHomepageBodyHpProductsSlider,
     ...data.elastigraph,
@@ -25,7 +24,6 @@ const IndexPage = ({ data }) => {
       <PrismicBrandMessage
         {...data.prismicHomepageBodyHpBrandMessage.primary}
       />
-      <Link to="/sofas-and-armchairs/"> Sofas and Armchairs</Link>
     </Layout>
   )
 }

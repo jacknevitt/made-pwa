@@ -13,7 +13,7 @@ const Cart = props => {
   return (
     <Layout>
       <SEO title="Shopping Basket" />
-      <div style={{ paddingTop: "1em" }}>
+      <div style={{ padding: "0 10px 0" }}>
         <h1>Shopping Basket</h1>
         <hr />
         <InfoBox>You have no items in your shopping basket.</InfoBox>

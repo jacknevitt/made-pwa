@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import Icon from "./icon"
 
 const Container = styled.div`
   background-color: #f5f5f5;
-  height: 25px;
   padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 40px;
 `
 
 const StyledButton = styled.button`
@@ -22,7 +24,6 @@ const StyledA = styled.a`
 `
 
 const InfoBar = props => {
-  console.log(props)
   const [isToggle, setToggle] = useState(true)
   return (
     <>
@@ -31,7 +32,9 @@ const InfoBar = props => {
           <StyledA href={props.primary.href.url}>
             {props.primary.text.text}
           </StyledA>
-          <StyledButton onClick={() => setToggle(!isToggle)}>x</StyledButton>
+          <StyledButton onClick={() => setToggle(!isToggle)}>
+            <Icon characterCode="e905" />
+          </StyledButton>
         </Container>
       ) : null}
     </>

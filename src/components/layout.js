@@ -46,7 +46,7 @@ body {
   font-family: 'Meridian-Regular', sans-serif;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Neruda', serif;
 }
 
