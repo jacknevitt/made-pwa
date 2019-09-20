@@ -19,36 +19,39 @@ const Title = styled.div`
   margin-top: 15px;
 `
 
-const ProductCard = styled.div``
+const NumberOfProducts = styled.div`
+  font-size: 12px;
+  font-family: "Meridian-Regular";
+  text-align: center;
+`
 
 const Productname = styled.p`
-  textalign: center;
-  font-family: Meridian-Regular;
+  font-family: "Meridian-Regular";
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   min-height: 63px;
-  paddin-gright: 2.5%;
+  padding-right: 2.5%;
   margin: 0px 0px 7px;
   color: black;
 `
 
 const Price = styled.p`
   font-family: "Meridian-Medium";
+  font-size: 14px;
 `
-
 const nameLength = string =>
   string.length > 48 ? string.substring(0, 45) + "..." : string.substring(0, 47)
 
 export default ({ data }) => {
-  console.log("💀 data: ", data)
-
+  const products = data.elastigraph.tag.products.edges
   return (
     <Layout>
-      <Title>Sofas and Armchairs</Title>
+      <Title>Sofas</Title>
+      <NumberOfProducts>{products.length} products</NumberOfProducts>
       <GridContainer>
-        {data.elastigraph.tag.products.edges.map(sofa => (
-          <ProductCard>
+        {products.map(sofa => (
+          <div>
             <Link
               to={"/" + sofa.node.url}
               style={{
@@ -71,7 +74,7 @@ export default ({ data }) => {
                 ? sofa.node.promotion.price.includingTax / 100
                 : sofa.node.price.includingTax / 100}
             </Price>
-          </ProductCard>
+          </div>
         ))}
       </GridContainer>
     </Layout>
