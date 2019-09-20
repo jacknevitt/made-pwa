@@ -23,6 +23,7 @@ const PrismicCarousel = ({ items }) => {
               title={item.hp_carousel_item_title.text}
               subtitle={item.hp_carousel_item_subtitle.text}
               cta={item.hp_item_text_cta.text}
+              link={item.hp_item_cta_link.url}
             />
           </StyledContainer>
         ) : null
@@ -53,10 +54,17 @@ const CtaText = styled.p`
   font-family: FS Neruda, sans-serif;
 `
 
-const PrismicCarouselCard = ({ title, cta }) => (
+const StyledA = styled.a`
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+`
+
+const PrismicCarouselCard = ({ title, cta, link }) => (
   <TextContainer>
     <TextTitle>{title}</TextTitle>
-
-    <CtaText>{cta.toUpperCase()}</CtaText>
+    <StyledA href={link}>
+      <CtaText>{cta.toUpperCase()}</CtaText>
+    </StyledA>
   </TextContainer>
 )
