@@ -50,7 +50,10 @@ h1 {
   font-family: 'Neruda', serif;
 }
 
-a { color: black }
+a {
+  color: black;
+  text-decoration: none;
+}
 `
 
 const Layout = ({ children }) => {
