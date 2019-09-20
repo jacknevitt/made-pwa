@@ -29,7 +29,7 @@ export default PrismicProductSlider
 
 const ProductCard = ({ title }) => (
   <CardContainer>
-    <img src="https://placedog.net/640/480?random" />
+    <img src="https://placedog.net/640/480?random" alt="a dog" />
     <p>{title}</p>
   </CardContainer>
 )
