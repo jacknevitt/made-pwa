@@ -223,9 +223,11 @@ class Header extends React.Component {
               this.setState({ modalIsOpen: !this.state.modalIsOpen })
               if (this.state.modalIsOpen) {
                 document.body.style.overflow = "auto"
+                document.body.style.position = "relative"
               }
               if (!this.state.modalIsOpen) {
                 document.body.style.overflow = "hidden"
+                document.body.style.position = "relative"
               }
             }}
             modalIsOpen={this.state.modalIsOpen}
