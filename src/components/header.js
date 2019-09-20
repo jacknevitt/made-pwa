@@ -21,8 +21,12 @@ const GreyOverlay = styled.div`
   width: 100vw;
 `
 const PosedGreyOverlay = posed(GreyOverlay)({
-  open: { background: "rgba(235, 235, 235, 1)" },
-  closed: { background: "rgba(235, 235, 235, 0)" },
+  open: { background: "rgba(235, 235, 235, 1)", zIndex: 9, overflow: "hidden" },
+  closed: {
+    background: "rgba(235, 235, 235, 0)",
+    zIndex: -9,
+    overflow: "auto",
+  },
 })
 
 const HeaderIconsContainer = styled.header`
@@ -207,9 +211,15 @@ class Header extends React.Component {
           pose={this.state.modalIsOpen ? "open" : "closed"}
         >
           <MenuCloseButton
-            onClick={() =>
+            onClick={() => {
               this.setState({ modalIsOpen: !this.state.modalIsOpen })
-            }
+              if (this.state.modalIsOpen) {
+                document.body.style.overflow = "auto"
+              }
+              if (!this.state.modalIsOpen) {
+                document.body.style.overflow = "hidden"
+              }
+            }}
             modalIsOpen={this.state.modalIsOpen}
             characterCode={this.state.modalIsOpen ? "e905" : "e903"}
           />
