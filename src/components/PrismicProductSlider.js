@@ -24,7 +24,7 @@ const StyledSliderTitle = styled.p`
   line-height: 40px;
   text-align: center;
   font-family: FS Neruda, sans-serif;
-  margin: 3vh;
+  margin: 3vh 0 0;
 `
 
 const StyledText = styled.p`
