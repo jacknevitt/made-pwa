@@ -14,6 +14,15 @@ module.exports = {
     author: `MADE.COM`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "210601747",
+      },
+    },
+  ],
+  plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-graphql",
