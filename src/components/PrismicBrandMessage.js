@@ -17,10 +17,14 @@ const StyledTitle = styled.h1`
 `
 
 const StyledContentBody = styled.p`
+  margin: 0;
   flex: 3;
-  width: 100%;
+  width: 80%;
   color: white;
   text-align: center;
+  font-size:20px;
+  FS Meridian Regular,sans-serif;
+  padding:0 10% 0;
 `
 
 const PrismicBrandMessage = ({
