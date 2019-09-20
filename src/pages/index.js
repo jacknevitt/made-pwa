@@ -25,7 +25,6 @@ const IndexPage = ({ data }) => {
       <PrismicBrandMessage
         {...data.prismicHomepageBodyHpBrandMessage.primary}
       />
-      <Link to="/sofas-and-armchairs/"> Sofas and Armchairs</Link>
     </Layout>
   )
 }

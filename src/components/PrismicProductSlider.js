@@ -20,11 +20,10 @@ const StyledImg = styled.img`
   width: 200px;
 `
 
-const StyledSliderTitle = styled.p`
+const StyledSliderTitle = styled.h2`
   font-size: 40px;
   line-height: 40px;
   text-align: center;
-  font-family: FS Neruda, sans-serif;
   margin: 3vh 0 0;
 `
 
