@@ -15,9 +15,11 @@ const PrismicCarousel = ({ items }) => {
     <>
       {items.map((item, index) =>
         index === 0 ? (
-          <StyledContainer img={item.hp_carousel_item_image_mobile.url}>
+          <StyledContainer
+            img={item.hp_carousel_item_image_mobile.url}
+            key={`carousel_${index}`}
+          >
             <PrismicCarouselCard
-              key={`carousel_${index}`}
               title={item.hp_carousel_item_title.text}
               subtitle={item.hp_carousel_item_subtitle.text}
               cta={item.hp_item_text_cta.text}
