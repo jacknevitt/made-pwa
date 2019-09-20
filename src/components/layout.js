@@ -49,6 +49,8 @@ body {
 h1 {
   font-family: 'Neruda', serif;
 }
+
+a { color: black }
 `
 
 const Layout = ({ children }) => {
