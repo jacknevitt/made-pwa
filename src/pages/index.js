@@ -12,12 +12,16 @@ import { graphql } from "gatsby"
 
 const IndexPage = ({ data }) => {
   console.log(data)
+  const props = {
+    ...data.prismicHomepageBodyHpProductsSlider,
+    ...data.elastigraph,
+  }
   return (
     <Layout>
       <SEO title="Home" />
       <InfoBar {...data.prismicInfobar.data.infobars[0]} />
       <PrismicCarousel {...data.prismicHomepageBodyHpCarousel} />
-      <PrismicProductSlider {...data.prismicHomepageBodyHpProductsSlider} />
+      <PrismicProductSlider {...props} />
       <PrismicBrandMessage
         {...data.prismicHomepageBodyHpBrandMessage.primary}
       />
@@ -121,6 +125,26 @@ export const GatsbyQuery = graphql`
               url
             }
           }
+        }
+      }
+    }
+
+    elastigraph {
+      products(
+        store: GB
+        skus: [
+          "SOFSCT019GRE-UK"
+          "CLPGLO024ZBR-UK"
+          "BEDSKY080BLU-UK"
+          "STOLUC008MAN-UK"
+          "DWRBUD001ZCO-UK"
+          "TBLLOM018NAT-UK"
+          "STOGUN003GRY-UK"
+          "BSPJUL004BLU-UK"
+        ]
+      ) {
+        images {
+          listingImage
         }
       }
     }

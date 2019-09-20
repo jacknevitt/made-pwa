@@ -8,14 +8,21 @@ const HeaderContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-bottom: 20px;
 `
 
 const HeaderIconsContainer = styled.header`
   width: 100%;
-  padding-top: 10px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   background: white;
+`
+
+const EmptyDiv = styled.div`
+  background-color: white;
+  width: 20px;
+  height: 30px;
 `
 
 const MadeLogo = styled.img`
@@ -36,8 +43,8 @@ const MenuModalContainer = styled.div`
 const SearchInputContainer = styled.div`
   display: flex;
   flex-wrap: no-wrap;
-  width: 80vw;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0 10px;
   border: 0;
   border-bottom: 1px solid black;
 `
@@ -45,15 +52,39 @@ const SearchInputContainer = styled.div`
 const BasketIcon = styled(Icon)`
   &:before {
     font-size: 26px;
+    text-decoration: none;
+    color: black;
+
+    &:visited {
+      text-decoration: none;
+      color: black;
+    }
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+    &:focus {
+      text-decoration: none;
+      color: black;
+    }
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: black;
+    }
   }
 `
 
 const SearchInput = styled.input`
+  font-size: 16px;
+  font-family: "Meridian-Regular", sans-serif;
+  color: rgb(43, 43, 43);
+  letter-spacing: 0.5px;
   width: 100%;
   appearance: none;
   -webkit-appearance: none;
   border: none;
-  & :focus {
+  &:focus {
     outline: none;
   }
 `
@@ -110,8 +141,8 @@ background: ${p => (p.modalIsOpen ? "black" : "white")};
 width: 45px;
 height: 45px;
 position: absolute;
-top: 0;
-left: ${p => (p.modalIsOpen ? "80vw" : "100vw")}
+top: 10px;
+left: ${p => (p.modalIsOpen ? "80vw" : "102vw")}
 
 &:before {
   font-size: 26px;
@@ -119,6 +150,14 @@ left: ${p => (p.modalIsOpen ? "80vw" : "100vw")}
   top: 6px;
   left: 8px;
 }
+`
+
+const SearchIcon = styled(Icon)`
+  padding-left: 6px;
+  padding-right: 6px;
+  &:before {
+    font-size: 18px;
+  }
 `
 
 class Header extends React.Component {
@@ -134,13 +173,16 @@ class Header extends React.Component {
     return (
       <HeaderContainer>
         <HeaderIconsContainer>
-          <MadeLogo src={madeLogo} style={{ marginLeft: "35vw" }} />
+          <EmptyDiv />
+          <Link to="/">
+            <MadeLogo src={madeLogo} />
+          </Link>
           <Link to="/cart">
             <BasketIcon characterCode={"e907"} />
           </Link>
         </HeaderIconsContainer>
         <SearchInputContainer>
-          <Icon characterCode={"e900"} />
+          <SearchIcon characterCode={"e900"} />
           <SearchInput placeholder={"Search for products and inspiration"} />
         </SearchInputContainer>
         <MenuModalContainer modalIsOpen={this.state.modalIsOpen}>
