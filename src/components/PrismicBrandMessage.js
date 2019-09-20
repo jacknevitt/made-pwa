@@ -14,6 +14,7 @@ const StyledTitle = styled.h1`
   width: 100%;
   color: white;
   text-align: center;
+  font-size: 40px;
 `
 
 const StyledContentBody = styled.p`
