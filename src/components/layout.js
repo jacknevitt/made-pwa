@@ -42,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
+  margin: 0px;
   font-family: 'Meridian-Regular', sans-serif;
 }
 
