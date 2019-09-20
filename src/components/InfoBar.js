@@ -24,7 +24,6 @@ const StyledA = styled.a`
 `
 
 const InfoBar = props => {
-  console.log(props)
   const [isToggle, setToggle] = useState(true)
   return (
     <>

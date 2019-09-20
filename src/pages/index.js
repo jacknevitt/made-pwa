@@ -11,7 +11,6 @@ import InfoBar from "../components/InfoBar"
 import { graphql } from "gatsby"
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   const props = {
     ...data.prismicHomepageBodyHpProductsSlider,
     ...data.elastigraph,

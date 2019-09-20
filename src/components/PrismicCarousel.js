@@ -10,8 +10,6 @@ height: 600px;
 `
 
 const PrismicCarousel = ({ items }) => {
-  console.log("carousel", items)
-
   return (
     <>
       {items.map((item, index) =>
