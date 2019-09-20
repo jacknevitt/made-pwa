@@ -75,11 +75,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{ textAlign: "center", padding: "10px 0 0" }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <footer style={{ textAlign: "center", padding: "10px 0 0" }}></footer>
       </div>
     </>
   )
