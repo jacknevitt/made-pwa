@@ -236,71 +236,186 @@ class Header extends React.Component {
               <MenuTitle>MENU</MenuTitle>
             </MenuTitleContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">SOFAS</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                SOFAS
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">ARMCHAIRS</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                ARMCHAIRS
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">CHAIRS</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                CHAIRS
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">TABLES</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                TABLES
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">STORAGE</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                STORAGE
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">BEDS</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                BEDS
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">MATTRESSES</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                MATTRESSES
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">LIGHTING</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                LIGHTING
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">HOME FURNISHINGS</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                HOME FURNISHINGS
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">COOK & DINE</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                COOK & DINE
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">ACCESSORIES</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                ACCESSORIES
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">LIFESTYLE</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                LIFESTYLE
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">CLEARANCE</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                CLEARANCE
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer>
-              <MenuItem to="/sofas-and-armchairs/">FURNITURE BY ROOM</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                FURNITURE BY ROOM
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(255, 167, 146);"}>
-              <MenuItem to="/sofas-and-armchairs/">TALENTLAB</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                TALENTLAB
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(157, 205, 210);"}>
-              <MenuItem to="/sofas-and-armchairs/">IDEAS</MenuItem>
+              <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
+                to="/sofas-and-armchairs/"
+              >
+                IDEAS
+              </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
               <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
                 to="/sofas-and-armchairs/"
                 extraStyles={
                   "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 155px;"
@@ -313,6 +428,9 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
               <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
                 to="/sofas-and-armchairs/"
                 extraStyles={
                   "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 100px;"
@@ -325,6 +443,9 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
               <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
                 to="/sofas-and-armchairs/"
                 extraStyles={
                   "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 100px;"
@@ -337,6 +458,9 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
               <MenuItem
+                onClick={() =>
+                  this.setState({ modalIsOpen: !this.state.modalIsOpen })
+                }
                 to="/sofas-and-armchairs/"
                 extraStyles={
                   "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 155px;"
