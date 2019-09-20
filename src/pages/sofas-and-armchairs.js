@@ -8,6 +8,7 @@ const tabletLandscapeMin = 960
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 0px 3.26%;
   @media (min-width: ${tabletLandscapeMin}px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
