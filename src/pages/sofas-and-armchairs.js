@@ -23,6 +23,7 @@ export default ({ data }) => {
               style={{
                 maxWidth: "100%",
               }}
+              loading="lazy"
             />
             <a href={sofa.node.url} style={{ textAlign: "center" }}>
               {sofa.node.name}
