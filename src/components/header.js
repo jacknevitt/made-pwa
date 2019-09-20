@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import posed from "react-pose"
 import styled from "styled-components"
 import madeLogo from "../images/MADE-LOGO-RGB_black.jpg"
 import Icon from "./icon"
@@ -11,9 +12,26 @@ const HeaderContainer = styled.div`
   margin-bottom: 20px;
 `
 
+const GreyOverlay = styled.div`
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+`
+const PosedGreyOverlay = posed(GreyOverlay)({
+  open: { background: "rgba(235, 235, 235, 1)", zIndex: 9, overflow: "hidden" },
+  closed: {
+    background: "rgba(235, 235, 235, 0)",
+    zIndex: -9,
+    overflow: "auto",
+  },
+})
+
 const HeaderIconsContainer = styled.header`
   width: 100%;
-  padding: 15px;
+  padding: 6px 15px 15px;
   display: flex;
   justify-content: space-between;
   background: white;
@@ -37,8 +55,12 @@ const MenuModalContainer = styled.div`
   background-color: white;
   position: absolute;
   z-index: 999;
-  left: ${p => (p.modalIsOpen ? "0" : "-100vw")};
 `
+
+const PosedMenuModalContainer = posed(MenuModalContainer)({
+  open: { left: 0 },
+  closed: { left: "-100vw" },
+})
 
 const SearchInputContainer = styled.div`
   display: flex;
@@ -104,7 +126,7 @@ const MenuTitle = styled.span`
 
 const MenuItemContainer = styled.div`
   height: 45px;
-  width: 100%;
+  width: 70vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,14 +163,14 @@ background: ${p => (p.modalIsOpen ? "black" : "white")};
 width: 45px;
 height: 45px;
 position: absolute;
-top: 10px;
+top: 0;
 left: ${p => (p.modalIsOpen ? "80vw" : "102vw")}
 
 &:before {
   font-size: 26px;
   position: absolute;
   top: 6px;
-  left: 8px;
+  left: 9px;
 }
 `
 
@@ -185,11 +207,19 @@ class Header extends React.Component {
           <SearchIcon characterCode={"e900"} />
           <SearchInput placeholder={"Search for products and inspiration"} />
         </SearchInputContainer>
-        <MenuModalContainer modalIsOpen={this.state.modalIsOpen}>
+        <PosedMenuModalContainer
+          pose={this.state.modalIsOpen ? "open" : "closed"}
+        >
           <MenuCloseButton
-            onClick={() =>
+            onClick={() => {
               this.setState({ modalIsOpen: !this.state.modalIsOpen })
-            }
+              if (this.state.modalIsOpen) {
+                document.body.style.overflow = "auto"
+              }
+              if (!this.state.modalIsOpen) {
+                document.body.style.overflow = "hidden"
+              }
+            }}
             modalIsOpen={this.state.modalIsOpen}
             characterCode={this.state.modalIsOpen ? "e905" : "e903"}
           />
@@ -200,7 +230,8 @@ class Header extends React.Component {
             <MenuItem to="/sofas-and-armchairs/">SOFAS</MenuItem>
             <Icon characterCode={"e901"} />
           </MenuItemContainer>
-        </MenuModalContainer>
+        </PosedMenuModalContainer>
+        <PosedGreyOverlay pose={this.state.modalIsOpen ? "open" : "closed"} />
       </HeaderContainer>
     )
   }
