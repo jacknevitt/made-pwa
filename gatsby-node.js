@@ -36,10 +36,7 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
 
-  // console.log("💄", data.elastigraph.tag.products)
-
   data.elastigraph.tag.products.edges.forEach(product => {
-    // console.log(product.node.name)
     actions.createPage({
       path: product.node.url,
       component: path.resolve(`./src/templates/PDP.js`),

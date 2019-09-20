@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import posed from "react-pose"
 import styled from "styled-components"
-import madeLogo from "../images/MADE-LOGO-RGB_black.jpg"
+import madeLogo from "../images/MADE-logo.svg"
 import Icon from "./icon"
 
 const HeaderContainer = styled.div`
@@ -121,7 +121,7 @@ const MenuTitleContainer = styled.div`
 `
 
 const MenuTitle = styled.span`
-  font-family: "";
+  font-family: "Meridian-Regular";
 `
 
 const MenuItemContainer = styled.div`
@@ -133,28 +133,35 @@ const MenuItemContainer = styled.div`
   border-bottom: 1px solid lightGrey;
   padding-left: 18px;
   padding-right: 18px;
+  ${p => p.extraStyles};
 `
 
 const MenuItem = styled(Link)`
-  font-family: "";
+  font-family: "Meridian-Regular";
+  font-size: 14px;
   text-decoration: none;
   &:visited {
     text-decoration: none;
     color: black;
+    ${p => p.extraStyles};
   }
   &:hover {
     text-decoration: none;
     color: black;
+    ${p => p.extraStyles};
   }
   &:focus {
     text-decoration: none;
     color: black;
+    ${p => p.extraStyles};
   }
   &:hover,
   &:active {
     text-decoration: none;
     color: black;
+    ${p => p.extraStyles};
   }
+  ${p => p.extraStyles};
 `
 
 const MenuCloseButton = styled(Icon)`
@@ -209,6 +216,7 @@ class Header extends React.Component {
         </SearchInputContainer>
         <PosedMenuModalContainer
           pose={this.state.modalIsOpen ? "open" : "closed"}
+          className={this.state.modalIsOpen ? "open" : "closed"}
         >
           <MenuCloseButton
             onClick={() => {
@@ -223,13 +231,123 @@ class Header extends React.Component {
             modalIsOpen={this.state.modalIsOpen}
             characterCode={this.state.modalIsOpen ? "e905" : "e903"}
           />
-          <MenuTitleContainer>
-            <MenuTitle>MENU</MenuTitle>
-          </MenuTitleContainer>
-          <MenuItemContainer>
-            <MenuItem to="/sofas-and-armchairs/">SOFAS</MenuItem>
-            <Icon characterCode={"e901"} />
-          </MenuItemContainer>
+          <div style={{ overflowY: "scroll", maxHeight: "100vh" }}>
+            <MenuTitleContainer>
+              <MenuTitle>MENU</MenuTitle>
+            </MenuTitleContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">SOFAS</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">ARMCHAIRS</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">CHAIRS</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">TABLES</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">STORAGE</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">BEDS</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">MATTRESSES</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">LIGHTING</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">HOME FURNISHINGS</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">COOK & DINE</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">ACCESSORIES</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">LIFESTYLE</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">CLEARANCE</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <MenuItem to="/sofas-and-armchairs/">FURNITURE BY ROOM</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer extraStyles={"background: rgb(255, 167, 146);"}>
+              <MenuItem to="/sofas-and-armchairs/">TALENTLAB</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer extraStyles={"background: rgb(157, 205, 210);"}>
+              <MenuItem to="/sofas-and-armchairs/">IDEAS</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
+              <MenuItem
+                to="/sofas-and-armchairs/"
+                extraStyles={
+                  "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 155px;"
+                }
+              >
+                <Icon characterCode={"e903"} extraStyles={"color: white;"} />
+                UNITED KINGDOM
+              </MenuItem>
+              <Icon characterCode={"e901"} extraStyles={"color: white"} />
+            </MenuItemContainer>
+            <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
+              <MenuItem
+                to="/sofas-and-armchairs/"
+                extraStyles={
+                  "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 100px;"
+                }
+              >
+                <Icon characterCode={"e92d"} extraStyles={"color: white;"} />
+                ACCOUNT
+              </MenuItem>
+              <Icon characterCode={"e901"} extraStyles={"color: white"} />
+            </MenuItemContainer>
+            <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
+              <MenuItem
+                to="/sofas-and-armchairs/"
+                extraStyles={
+                  "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 100px;"
+                }
+              >
+                <Icon characterCode={"e94a"} extraStyles={"color: white;"} />
+                SUPPORT
+              </MenuItem>
+              <Icon characterCode={"e901"} extraStyles={"color: white"} />
+            </MenuItemContainer>
+            <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
+              <MenuItem
+                to="/sofas-and-armchairs/"
+                extraStyles={
+                  "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 155px;"
+                }
+              >
+                <Icon characterCode={"e918"} extraStyles={"color: white;"} />
+                OUR SHOWROOM
+              </MenuItem>
+              <Icon characterCode={"e901"} extraStyles={"color: white"} />
+            </MenuItemContainer>
+          </div>
         </PosedMenuModalContainer>
         <PosedGreyOverlay pose={this.state.modalIsOpen ? "open" : "closed"} />
       </HeaderContainer>
