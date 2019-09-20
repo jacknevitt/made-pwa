@@ -16,7 +16,7 @@ const CardContainer = styled.div`
 `
 
 const StyledImg = styled.img`
-  height: 250px;
+  height: 230px;
   width: 200px;
 `
 
@@ -25,7 +25,12 @@ const StyledSliderTitle = styled.p`
   line-height: 40px;
   text-align: center;
   font-family: FS Neruda, sans-serif;
-  margin: 3vh;
+  margin: 3vh 0 0;
+`
+
+const StyledText = styled.p`
+  text-align: center;
+  padding: 5px;
 `
 
 const images = [
@@ -79,7 +84,7 @@ const ProductCard = ({ title, img }) => (
     <StyledImg
       src={`https://res.cloudinary.com/made-com/image/upload/c_pad,d_made.svg,f_auto,w_265,dpr_1.0,q_auto:best/v4/${img}`}
     />
-    <p>{title}</p>
+    <StyledText>{title}</StyledText>
   </CardContainer>
 )
 

@@ -13,17 +13,7 @@ module.exports = {
     description: `Discover our range of furniture and homeware combining design and affordability. From design sofa to table and lighting create your own space with MADE.com`,
     author: `MADE.COM`,
   },
-  plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "UA-12859730-44",
-        head: true,
-      },
-    },
-  ],
-  plugins: [
+    plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-graphql",
@@ -31,6 +21,14 @@ module.exports = {
         typeName: "MADE",
         fieldName: "elastigraph",
         url: "https://es-elastigraph.made.com/graphql",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-12859730-44",
+        head: true,
       },
     },
     {
