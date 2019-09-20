@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 
@@ -24,9 +24,9 @@ export default ({ data }) => {
                 maxWidth: "100%",
               }}
             />
-            <a href={sofa.node.url} style={{ textAlign: "center" }}>
+            <Link to={"/" + sofa.node.url} style={{ textAlign: "center" }}>
               {sofa.node.name}
-            </a>
+            </Link>
             <p>
               £
               {sofa.node.promotion.price
