@@ -239,9 +239,17 @@ class Header extends React.Component {
             </MenuTitleContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 SOFAS
@@ -250,9 +258,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 ARMCHAIRS
@@ -261,9 +277,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 CHAIRS
@@ -272,9 +296,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 TABLES
@@ -283,9 +315,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 STORAGE
@@ -294,9 +334,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 BEDS
@@ -305,9 +353,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 MATTRESSES
@@ -316,9 +372,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 LIGHTING
@@ -327,9 +391,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 HOME FURNISHINGS
@@ -338,9 +410,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 COOK & DINE
@@ -349,9 +429,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 ACCESSORIES
@@ -360,9 +448,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 LIFESTYLE
@@ -371,9 +467,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 CLEARANCE
@@ -382,9 +486,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 FURNITURE BY ROOM
@@ -393,9 +505,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(255, 167, 146);"}>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 TALENTLAB
@@ -404,9 +524,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(157, 205, 210);"}>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
               >
                 IDEAS
@@ -415,9 +543,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
                 extraStyles={
                   "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 155px;"
@@ -430,9 +566,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
                 extraStyles={
                   "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 100px;"
@@ -445,9 +589,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
                 extraStyles={
                   "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 100px;"
@@ -460,9 +612,17 @@ class Header extends React.Component {
             </MenuItemContainer>
             <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
               <MenuItem
-                onClick={() =>
+                onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
-                }
+                  if (this.state.modalIsOpen) {
+                    document.body.style.overflow = "auto"
+                    document.body.style.position = "relative"
+                  }
+                  if (!this.state.modalIsOpen) {
+                    document.body.style.overflow = "hidden"
+                    document.body.style.position = "relative"
+                  }
+                }}
                 to="/sofas-and-armchairs/"
                 extraStyles={
                   "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 155px;"
