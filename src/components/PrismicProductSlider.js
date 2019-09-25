@@ -56,7 +56,7 @@ const images = [
 ]
 const PrismicProductSlider = props => {
   // we need to fetch product info by sku
-  const { items, products } = props
+  const { items } = props
   return (
     <>
       <StyledSliderTitle>Best of the Bunch</StyledSliderTitle>

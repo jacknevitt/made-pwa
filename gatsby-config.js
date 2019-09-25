@@ -13,7 +13,7 @@ module.exports = {
     description: `Discover our range of furniture and homeware combining design and affordability. From design sofa to table and lighting create your own space with MADE.com`,
     author: `MADE.COM`,
   },
-    plugins: [
+  plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-graphql",
@@ -52,6 +52,7 @@ module.exports = {
         icon: `src/images/MADE-SCREWHEAD-RGB-fill-white.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-styled-components`,
     /*
      * Gatsby's data processing layer begins with “source”
      * plugins. Here the site sources its data from prismic.io.
