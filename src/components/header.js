@@ -2,7 +2,9 @@ import { Link } from "gatsby"
 import React from "react"
 import posed from "react-pose"
 import styled from "styled-components"
+
 import madeLogo from "../images/MADE-logo.svg"
+
 import Icon from "./icon"
 
 const HeaderContainer = styled.div`
@@ -35,12 +37,6 @@ const HeaderIconsContainer = styled.header`
   display: flex;
   justify-content: space-between;
   background: white;
-`
-
-const EmptyDiv = styled.div`
-  background-color: white;
-  width: 20px;
-  height: 30px;
 `
 
 const MadeLogo = styled.img`
@@ -133,7 +129,6 @@ const MenuItemContainer = styled.div`
   border-bottom: 1px solid lightGrey;
   padding-left: 18px;
   padding-right: 18px;
-  ${p => p.extraStyles};
 `
 
 const MenuItem = styled(Link)`
@@ -143,25 +138,20 @@ const MenuItem = styled(Link)`
   &:visited {
     text-decoration: none;
     color: black;
-    ${p => p.extraStyles};
   }
   &:hover {
     text-decoration: none;
     color: black;
-    ${p => p.extraStyles};
   }
   &:focus {
     text-decoration: none;
     color: black;
-    ${p => p.extraStyles};
   }
   &:hover,
   &:active {
     text-decoration: none;
     color: black;
-    ${p => p.extraStyles};
   }
-  ${p => p.extraStyles};
 `
 
 const MenuCloseButton = styled(Icon)`
@@ -190,19 +180,18 @@ const SearchIcon = styled(Icon)`
 `
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      modalIsOpen: false,
-    }
+  state = {
+    modalIsOpen: false,
   }
+  openModal = () => this.setState({ modalIsOpen: true })
 
   render() {
     return (
       <HeaderContainer>
         <HeaderIconsContainer>
-          <EmptyDiv />
+          <button onClick={this.openModal}>
+            <Icon characterCode="e903"></Icon>
+          </button>
           <Link to="/">
             <MadeLogo src={madeLogo} />
           </Link>
@@ -423,7 +412,7 @@ class Header extends React.Component {
                 }}
                 to="/sofas-and-armchairs/"
               >
-                COOK & DINE
+                COOK &amp; DINE
               </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
@@ -503,7 +492,7 @@ class Header extends React.Component {
               </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
-            <MenuItemContainer extraStyles={"background: rgb(255, 167, 146);"}>
+            <MenuItemContainer style={{ background: "rgb(255, 167, 146)" }}>
               <MenuItem
                 onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
@@ -522,7 +511,7 @@ class Header extends React.Component {
               </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
-            <MenuItemContainer extraStyles={"background: rgb(157, 205, 210);"}>
+            <MenuItemContainer style={{ background: "rgb(157, 205, 210)" }}>
               <MenuItem
                 onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
@@ -541,7 +530,7 @@ class Header extends React.Component {
               </MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
-            <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
+            <MenuItemContainer style={{ background: "rgb(43, 43, 43)" }}>
               <MenuItem
                 onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
@@ -555,16 +544,20 @@ class Header extends React.Component {
                   }
                 }}
                 to="/sofas-and-armchairs/"
-                extraStyles={
-                  "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 155px;"
-                }
+                style={{
+                  color: "white",
+                  lineHeight: "35px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "155px",
+                }}
               >
-                <Icon characterCode={"e903"} extraStyles={"color: white;"} />
+                <Icon characterCode={"e903"} style={{ color: "white" }} />
                 UNITED KINGDOM
               </MenuItem>
-              <Icon characterCode={"e901"} extraStyles={"color: white"} />
+              <Icon characterCode={"e901"} style={{ color: "white" }} />
             </MenuItemContainer>
-            <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
+            <MenuItemContainer style={{ background: "rgb(43, 43, 43)" }}>
               <MenuItem
                 onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
@@ -578,16 +571,25 @@ class Header extends React.Component {
                   }
                 }}
                 to="/sofas-and-armchairs/"
-                extraStyles={
-                  "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 100px;"
-                }
+                style={{
+                  color: "white",
+                  lineHeight: "35px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "100px",
+                }}
               >
-                <Icon characterCode={"e92d"} extraStyles={"color: white;"} />
+                <Icon
+                  characterCode={"e92d"}
+                  style={{
+                    color: "white",
+                  }}
+                />
                 ACCOUNT
               </MenuItem>
-              <Icon characterCode={"e901"} extraStyles={"color: white"} />
+              <Icon characterCode={"e901"} style={{ color: "white" }} />
             </MenuItemContainer>
-            <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
+            <MenuItemContainer style={{ background: "rgb(43, 43, 43)" }}>
               <MenuItem
                 onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
@@ -601,16 +603,20 @@ class Header extends React.Component {
                   }
                 }}
                 to="/sofas-and-armchairs/"
-                extraStyles={
-                  "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 100px;"
-                }
+                style={{
+                  color: "white",
+                  lineHeight: "35px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "100px",
+                }}
               >
-                <Icon characterCode={"e94a"} extraStyles={"color: white;"} />
+                <Icon characterCode={"e94a"} style={{ color: "white" }} />
                 SUPPORT
               </MenuItem>
-              <Icon characterCode={"e901"} extraStyles={"color: white"} />
+              <Icon characterCode={"e901"} style={{ color: "white" }} />
             </MenuItemContainer>
-            <MenuItemContainer extraStyles={"background: rgb(43, 43, 43);"}>
+            <MenuItemContainer style={{ background: "rgb(43, 43, 43)" }}>
               <MenuItem
                 onClick={() => {
                   this.setState({ modalIsOpen: !this.state.modalIsOpen })
@@ -624,14 +630,18 @@ class Header extends React.Component {
                   }
                 }}
                 to="/sofas-and-armchairs/"
-                extraStyles={
-                  "color: white; line-height: 35px; display: flex;justify-content: space-between; width: 155px;"
-                }
+                style={{
+                  color: "white",
+                  lineHeight: "35px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "155px",
+                }}
               >
-                <Icon characterCode={"e918"} extraStyles={"color: white;"} />
+                <Icon characterCode={"e918"} style={{ color: "white" }} />
                 OUR SHOWROOM
               </MenuItem>
-              <Icon characterCode={"e901"} extraStyles={"color: white"} />
+              <Icon characterCode={"e901"} style={{ color: "white" }} />
             </MenuItemContainer>
           </div>
         </PosedMenuModalContainer>
