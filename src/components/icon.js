@@ -14,15 +14,15 @@ const Icon = styled.div`
 }
 
 font-family: Made-icomoon;
-font-size: 0;
+font-size: 1em;
 
 &:disabled {
   cursor: not-allowed;
   opacity: 0.4;
 }
 &:before {
-  font-size: 1rem;
-  line-height: 30px;
+  font-size: 1em;
+  line-height: 1em;
   content: '\\${p => p.characterCode}';
 }
 `

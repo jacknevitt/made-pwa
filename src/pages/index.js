@@ -18,8 +18,6 @@ const IndexPage = ({ data }) => {
     },
   } = data
 
-  console.log("🍑", prismicHomepageBody, prismicInfobar)
-
   const [
     prismicHomepageBodyHpCarousel,
     prismicHomepageBodyHpProductsSlider,
