@@ -46,6 +46,10 @@ const GlobalStyle = createGlobalStyle`
 body {
   margin: 0px;
   font-family: 'Meridian-Regular', sans-serif;
+
+  &.modal-is-open {
+    overflow: hidden;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

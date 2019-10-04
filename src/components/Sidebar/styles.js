@@ -13,8 +13,12 @@ const GreyOverlay = styled.div`
   width: 100vw;
 `
 export const PosedGreyOverlay = posed(GreyOverlay)({
-  open: { background: "rgba(235, 235, 235, 1)", zIndex: 9, overflow: "hidden" },
-  closed: {
+  enter: {
+    background: "rgba(235, 235, 235, 0.7)",
+    zIndex: 9,
+    overflow: "hidden",
+  },
+  exit: {
     background: "rgba(235, 235, 235, 0)",
     zIndex: -9,
     overflow: "auto",
@@ -31,8 +35,8 @@ const MenuModalContainer = styled.div`
 `
 
 export const PosedMenuModalContainer = posed(MenuModalContainer)({
-  open: { left: 0 },
-  closed: { left: "-100vw" },
+  enter: { left: 0 },
+  exit: { left: "-100vw" },
 })
 
 export const MenuTitleContainer = styled.div`
@@ -82,18 +86,18 @@ export const MenuItem = styled.span`
 `
 
 export const MenuCloseButton = styled(Icon)`
-color: ${p => (p.modalIsOpen ? "white" : "black")};
-background: ${p => (p.modalIsOpen ? "black" : "white")};
-width: 45px;
-height: 45px;
-position: absolute;
-top: 0;
-left:  "80vw" : "102vw")}
+  color: ${p => (p.modalIsOpen ? "white" : "black")};
+  background: ${p => (p.modalIsOpen ? "black" : "white")};
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  left: 80vw;
 
-&:before {
-font-size: 26px;
-position: absolute;
-top: 6px;
-left: 9px;
-}
+  &:before {
+    font-size: 26px;
+    position: absolute;
+    top: 6px;
+    left: 9px;
+  }
 `
