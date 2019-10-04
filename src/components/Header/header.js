@@ -40,17 +40,20 @@ class Header extends React.Component {
           >
             <Icon characterCode="e903"></Icon>
           </button>
-          <Link to="/">
+          <Link to="/" aria-label="homepage">
             <MadeLogo src={madeLogo} alt="" />
           </Link>
-          <Link to="/cart">
+          <Link to="/cart" aria-label="view cart">
             <BasketIcon characterCode={"e907"} />
           </Link>
         </HeaderIconsContainer>
         <Container>
           <SearchInputContainer>
             <SearchIcon characterCode={"e900"} />
-            <SearchInput placeholder={"Search for products and inspiration"} />
+            <SearchInput
+              placeholder={"Search for products and inspiration"}
+              aria-label="Search"
+            />
           </SearchInputContainer>
         </Container>
         <Sidebar
