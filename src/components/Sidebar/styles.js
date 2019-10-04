@@ -27,6 +27,7 @@ export const PosedGreyOverlay = posed(GreyOverlay)({
 
 const MenuModalContainer = styled.div`
   width: 80vw;
+  max-width: 400px;
   height: 100vh;
   top: 0;
   background-color: white;
@@ -92,7 +93,7 @@ export const MenuCloseButton = styled(Icon)`
   height: 45px;
   position: absolute;
   top: 0;
-  left: 80vw;
+  left: 100%;
 
   &:before {
     font-size: 26px;
