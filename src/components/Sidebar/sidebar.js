@@ -34,7 +34,7 @@ const Sidebar = ({ modalIsOpen, closeModal }) => {
             characterCode={modalIsOpen ? "e905" : "e903"}
           />
           <div
-            style={{ overflowY: "scroll", maxHeight: "100vh" }}
+            style={{ overflowY: "auto", maxHeight: "100vh" }}
             onClick={closeModal}
           >
             <MenuTitleContainer>

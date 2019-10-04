@@ -41,7 +41,7 @@ class Header extends React.Component {
             <Icon characterCode="e903"></Icon>
           </button>
           <Link to="/">
-            <MadeLogo src={madeLogo} />
+            <MadeLogo src={madeLogo} alt="" />
           </Link>
           <Link to="/cart">
             <BasketIcon characterCode={"e907"} />

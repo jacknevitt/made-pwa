@@ -58,6 +58,7 @@ const ProductCard = ({ title, img }) => (
   <CardContainer>
     <StyledImg
       src={`https://res.cloudinary.com/made-com/image/upload/c_pad,d_made.svg,f_auto,w_265,dpr_1.0,q_auto:best/v4/${img}`}
+      alt={title}
     />
     <StyledText>{title}</StyledText>
   </CardContainer>

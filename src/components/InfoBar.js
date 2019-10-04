@@ -41,7 +41,10 @@ const InfoBar = props => {
             {props.primary.text.text}{" "}
             {moment(props.primary.countdown_end_time).fromNow()}
           </StyledA>
-          <StyledButton onClick={() => setToggle(!isToggle)}>
+          <StyledButton
+            onClick={() => setToggle(!isToggle)}
+            aria-label="remove infobar"
+          >
             <Icon characterCode="e905" />
           </StyledButton>
         </PosedBanner>
