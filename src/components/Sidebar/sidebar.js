@@ -14,7 +14,7 @@ import {
 } from "./styles"
 
 const Sidebar = ({ modalIsOpen, closeModal }) => {
-  if (window) {
+  if (typeof window !== "undefined") {
     if (modalIsOpen) {
       window.document.body.classList.add("modal-is-open")
     } else {
