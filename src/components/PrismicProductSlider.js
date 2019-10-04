@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import styled from "styled-components"
 
@@ -54,6 +53,16 @@ const images = [
       "catalog/product/catalog/2/6/1/c/261c0339672ad441e657b998128b3f89aaf14702_DWRBUD001ZCO_UK_Bude_16_Piece_Cutlery_Set_Matt_Copper_PL.jpg",
   },
 ]
+
+const ProductCard = ({ title, img }) => (
+  <CardContainer>
+    <StyledImg
+      src={`https://res.cloudinary.com/made-com/image/upload/c_pad,d_made.svg,f_auto,w_265,dpr_1.0,q_auto:best/v4/${img}`}
+    />
+    <StyledText>{title}</StyledText>
+  </CardContainer>
+)
+
 const PrismicProductSlider = props => {
   // we need to fetch product info by sku
   const { items } = props
@@ -76,24 +85,3 @@ const PrismicProductSlider = props => {
 }
 
 export default PrismicProductSlider
-
-const ProductCard = ({ title, img }) => (
-  <CardContainer>
-    <StyledImg
-      src={`https://res.cloudinary.com/made-com/image/upload/c_pad,d_made.svg,f_auto,w_265,dpr_1.0,q_auto:best/v4/${img}`}
-    />
-    <StyledText>{title}</StyledText>
-  </CardContainer>
-)
-
-export const GatsbyQuery = graphql`
-  query {
-    elastigraph {
-      products(store: GB, skus: ["SOFSCT019GRE-UK", "CLPGLO024ZBR-UK"]) {
-        images {
-          listingImage
-        }
-      }
-    }
-  }
-`

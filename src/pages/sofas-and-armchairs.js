@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
+
 import Layout from "../components/layout"
 
 const tabletLandscapeMin = 960
@@ -8,7 +9,8 @@ const tabletLandscapeMin = 960
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0px 3.26%;
+  grid-gap: 15px;
+  padding: 0px 15px;
   @media (min-width: ${tabletLandscapeMin}px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -58,7 +60,7 @@ const Price = styled.p`
 const nameLength = string =>
   string.length > 48 ? string.substring(0, 45) + "..." : string.substring(0, 47)
 
-export default ({ data }) => {
+export const SofasAndArmchairs = ({ data }) => {
   const products = data.elastigraph.tag.products.edges
   return (
     <Layout>
@@ -66,7 +68,7 @@ export default ({ data }) => {
       <NumberOfProducts>{products.length} products</NumberOfProducts>
       <GridContainer>
         {products.map(sofa => (
-          <div>
+          <div key={sofa.node.name}>
             <Link
               to={"/" + sofa.node.url}
               style={{
@@ -80,6 +82,8 @@ export default ({ data }) => {
                   maxWidth: "100%",
                 }}
                 loading="lazy"
+                // height="197"
+                width="265"
               />
               <ProductName>{nameLength(sofa.node.name)}</ProductName>
             </Link>
@@ -95,6 +99,8 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export default SofasAndArmchairs
 
 export const query = graphql`
   query {

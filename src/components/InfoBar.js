@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import moment from "moment"
+
 import Icon from "./icon"
 
 const Container = styled.div`
@@ -30,7 +32,8 @@ const InfoBar = props => {
       {isToggle ? (
         <Container>
           <StyledA href={props.primary.href.url}>
-            {props.primary.text.text}
+            {props.primary.text.text}{" "}
+            {moment(props.primary.countdown_end_time).fromNow()}
           </StyledA>
           <StyledButton onClick={() => setToggle(!isToggle)}>
             <Icon characterCode="e905" />

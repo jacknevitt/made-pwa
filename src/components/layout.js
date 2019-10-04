@@ -9,13 +9,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from "styled-components"
+
 import NerudaTTF from "../fonts/FSNerudaWeb-Black.ttf"
 import NerudaWOFF from "../fonts/FSNerudaWeb-Black.woff"
 import MeridianRegTTF from "../fonts/FSMeridianWeb-Regular.ttf"
 import MeridianRegWOFF from "../fonts/FSMeridianWeb-Regular.woff"
 import MeridianMedTTF from "../fonts/FSMeridianWeb-Medium.ttf"
 import MeridianMedWOFF from "../fonts/FSMeridianWeb-Medium.woff"
-import Header from "./header"
+
+import Header from "./Header/header"
 import "./layout.css"
 
 const GlobalStyle = createGlobalStyle`
@@ -44,6 +46,10 @@ const GlobalStyle = createGlobalStyle`
 body {
   margin: 0px;
   font-family: 'Meridian-Regular', sans-serif;
+
+  &.modal-is-open {
+    overflow: hidden;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,7 +84,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{ textAlign: "center", padding: "10px 0 0" }}></footer>
+        {/* <footer style={{ textAlign: "center", padding: "10px 0 0" }}></footer> */}
       </div>
     </>
   )
