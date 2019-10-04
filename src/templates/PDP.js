@@ -65,7 +65,6 @@ export default ({
           style={{
             fontSize: "40px",
             lineHeight: "3.5rem",
-            fontFamily: "FS Neruda,sans-serif",
             margin: "0",
           }}
         >
