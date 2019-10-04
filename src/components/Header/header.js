@@ -4,6 +4,7 @@ import React from "react"
 import madeLogo from "../../images/MADE-logo.svg"
 import Icon from "../icon"
 import Sidebar from "../Sidebar/sidebar"
+import Container from "../Atoms/container"
 
 import {
   HeaderContainer,
@@ -46,10 +47,12 @@ class Header extends React.Component {
             <BasketIcon characterCode={"e907"} />
           </Link>
         </HeaderIconsContainer>
-        <SearchInputContainer>
-          <SearchIcon characterCode={"e900"} />
-          <SearchInput placeholder={"Search for products and inspiration"} />
-        </SearchInputContainer>
+        <Container>
+          <SearchInputContainer>
+            <SearchIcon characterCode={"e900"} />
+            <SearchInput placeholder={"Search for products and inspiration"} />
+          </SearchInputContainer>
+        </Container>
         <Sidebar
           modalIsOpen={this.state.modalIsOpen}
           closeModal={this.closeModal}

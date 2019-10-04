@@ -1,15 +1,21 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import posed, { PoseGroup } from "react-pose"
 import moment from "moment"
 
 import Icon from "./icon"
 
-const Container = styled.div`
+const Banner = styled.div`
   background-color: #f5f5f5;
   padding: 15px;
   display: grid;
   grid-template-columns: 1fr 40px;
 `
+
+const PosedBanner = posed(Banner)({
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
+})
 
 const StyledButton = styled.button`
   padding: 0;
@@ -28,9 +34,9 @@ const StyledA = styled.a`
 const InfoBar = props => {
   const [isToggle, setToggle] = useState(true)
   return (
-    <>
+    <PoseGroup flipMove={false}>
       {isToggle ? (
-        <Container>
+        <PosedBanner key="banner">
           <StyledA href={props.primary.href.url}>
             {props.primary.text.text}{" "}
             {moment(props.primary.countdown_end_time).fromNow()}
@@ -38,9 +44,9 @@ const InfoBar = props => {
           <StyledButton onClick={() => setToggle(!isToggle)}>
             <Icon characterCode="e905" />
           </StyledButton>
-        </Container>
+        </PosedBanner>
       ) : null}
-    </>
+    </PoseGroup>
   )
 }
 

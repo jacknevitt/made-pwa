@@ -43,6 +43,10 @@ const GlobalStyle = createGlobalStyle`
        url('${MeridianMedTTF}') format('truetype'), /* Safari, Android, iOS */
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0px;
   font-family: 'Meridian-Regular', sans-serif;

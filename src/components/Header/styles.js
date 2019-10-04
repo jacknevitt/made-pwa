@@ -26,7 +26,6 @@ export const SearchInputContainer = styled.div`
   display: flex;
   flex-wrap: no-wrap;
   width: 100%;
-  margin: 0 10px;
   border: 0;
   border-bottom: 1px solid black;
 `
