@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const tabletLandscapeMin = 960
 
@@ -60,24 +61,29 @@ const Price = styled.p`
 const nameLength = string =>
   string.length > 48 ? string.substring(0, 45) + "..." : string.substring(0, 47)
 
-export const SofasAndArmchairs = ({ data }) => {
-  const products = data.elastigraph.tag.products.edges
+export const ProductListingPage = ({ data }) => {
+  const {
+    products: { edges: products },
+    metadata,
+  } = data.elastigraph.tag
   return (
     <Layout>
-      <Title>Sofas</Title>
+      <SEO title={metadata.metaTitle} description={metadata.metaDescription} />
+      <Title>{metadata.name}</Title>
+      <p style={{ textAlign: "center" }}>{metadata.description}</p>
       <NumberOfProducts>{products.length} products</NumberOfProducts>
       <GridContainer>
-        {products.map(sofa => (
-          <div key={sofa.node.name}>
+        {products.map(product => (
+          <div key={product.node.name}>
             <Link
-              to={"/" + sofa.node.url}
+              to={"/" + product.node.url}
               style={{
                 textDecoration: "none",
               }}
             >
               <img
-                src={`https://res.cloudinary.com/made-com/image/upload/c_pad,d_made.svg,f_auto,w_265,dpr_1.0,q_auto:best/v4/${sofa.node.images.listingImage}`}
-                alt="sofa"
+                src={`https://res.cloudinary.com/made-com/image/upload/c_pad,d_made.svg,f_auto,w_265,dpr_1.0,q_auto:best/v4/${product.node.images.listingImage}`}
+                alt="product"
                 style={{
                   maxWidth: "100%",
                 }}
@@ -85,13 +91,13 @@ export const SofasAndArmchairs = ({ data }) => {
                 // height="197"
                 width="265"
               />
-              <ProductName>{nameLength(sofa.node.name)}</ProductName>
+              <ProductName>{nameLength(product.node.name)}</ProductName>
             </Link>
             <Price>
               £
-              {sofa.node.promotion.price
-                ? sofa.node.promotion.price.includingTax / 100
-                : sofa.node.price.includingTax / 100}
+              {product.node.promotion.price
+                ? product.node.promotion.price.includingTax / 100
+                : product.node.price.includingTax / 100}
             </Price>
           </div>
         ))}
@@ -100,12 +106,19 @@ export const SofasAndArmchairs = ({ data }) => {
   )
 }
 
-export default SofasAndArmchairs
+export default ProductListingPage
 
 export const query = graphql`
-  query {
+  query($url: String!) {
     elastigraph {
-      tag(store: GB, url: "sofas-and-armchairs") {
+      tag(store: GB, url: $url) {
+        metadata {
+          breadcrumbs
+          name
+          metaDescription
+          metaTitle
+          description
+        }
         products(first: 250) {
           edges {
             node {

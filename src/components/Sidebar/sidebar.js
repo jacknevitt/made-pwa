@@ -40,79 +40,28 @@ const Sidebar = ({ modalIsOpen, closeModal }) => {
             <MenuTitleContainer>
               <MenuTitle>MENU</MenuTitle>
             </MenuTitleContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
+            <MenuItemContainer to="/sofas-and-armchairs/3-seater-sofas">
               <MenuItem>SOFAS</MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>ARMCHAIRS</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>CHAIRS</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>TABLES</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>STORAGE</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>BEDS</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>MATTRESSES</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>LIGHTING</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>HOME FURNISHINGS</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>COOK &amp; DINE</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>ACCESSORIES</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>LIFESTYLE</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>CLEARANCE</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
-            <MenuItemContainer to="/sofas-and-armchairs/">
-              <MenuItem>FURNITURE BY ROOM</MenuItem>
-              <Icon characterCode={"e901"} />
-            </MenuItemContainer>
+
             <MenuItemContainer
               style={{ background: "rgb(255, 167, 146)" }}
-              to="/sofas-and-armchairs/"
+              to="/sofas-and-armchairs/3-seater-sofas"
             >
               <MenuItem>TALENTLAB</MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer
               style={{ background: "rgb(157, 205, 210)" }}
-              to="/sofas-and-armchairs/"
+              to="/sofas-and-armchairs/3-seater-sofas"
             >
               <MenuItem>IDEAS</MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
             <MenuItemContainer
               style={{ background: "rgb(43, 43, 43)" }}
-              to="/sofas-and-armchairs/"
+              to="/sofas-and-armchairs/3-seater-sofas"
             >
               <MenuItem
                 style={{
@@ -130,7 +79,7 @@ const Sidebar = ({ modalIsOpen, closeModal }) => {
             </MenuItemContainer>
             <MenuItemContainer
               style={{ background: "rgb(43, 43, 43)" }}
-              to="/sofas-and-armchairs/"
+              to="/sofas-and-armchairs/3-seater-sofas"
             >
               <MenuItem
                 style={{
@@ -153,7 +102,7 @@ const Sidebar = ({ modalIsOpen, closeModal }) => {
             </MenuItemContainer>
             <MenuItemContainer
               style={{ background: "rgb(43, 43, 43)" }}
-              to="/sofas-and-armchairs/"
+              to="/sofas-and-armchairs/3-seater-sofas"
             >
               <MenuItem
                 style={{
@@ -171,7 +120,7 @@ const Sidebar = ({ modalIsOpen, closeModal }) => {
             </MenuItemContainer>
             <MenuItemContainer
               style={{ background: "rgb(43, 43, 43)" }}
-              to="/sofas-and-armchairs/"
+              to="/sofas-and-armchairs/3-seater-sofas"
             >
               <MenuItem
                 style={{

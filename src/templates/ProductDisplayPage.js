@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+
 import Layout from "../components/layout"
 import Button from "../components/button"
 import TextLink from "../components/textLink"
@@ -48,7 +49,7 @@ const StyledH3 = styled.h3`
   }
 `
 
-export default ({
+const PDP = ({
   data: {
     elastigraph: { product },
   },
@@ -160,6 +161,8 @@ export default ({
     </Layout>
   )
 }
+
+export default PDP
 
 export const query = graphql`
   query($url: String!) {

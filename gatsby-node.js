@@ -5,7 +5,23 @@
  */
 const path = require(`path`)
 
+const tags = ["sofas-and-armchairs/3-seater-sofas"]
+
+exports.onCreateNode = ({ node }) => {
+  // console.log(node.internal.type)
+}
+
 exports.createPages = async ({ actions, graphql }) => {
+  tags.forEach(tag => {
+    actions.createPage({
+      path: tag,
+      component: path.resolve("./src/templates/ProductListingPage.js"),
+      context: {
+        url: tag,
+      },
+    })
+  })
+
   const { data } = await graphql(`
     query {
       elastigraph {
@@ -36,12 +52,12 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
 
-  data.elastigraph.tag.products.edges.forEach(product => {
+  data.elastigraph.tag.products.edges.forEach(({ node }) => {
     actions.createPage({
-      path: product.node.url,
-      component: path.resolve(`./src/templates/PDP.js`),
+      path: node.url,
+      component: path.resolve(`./src/templates/ProductDisplayPage.js`),
       context: {
-        url: product.node.url,
+        url: node.url,
       },
     })
   })
