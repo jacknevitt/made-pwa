@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Breadcrumbs from "../components/Breadcrumbs"
 
 const tabletLandscapeMin = 960
 
@@ -69,8 +70,8 @@ export const ProductListingPage = ({ data }) => {
   return (
     <Layout>
       <SEO title={metadata.metaTitle} description={metadata.metaDescription} />
+      <Breadcrumbs breadcrumbs={metadata.breadcrumbs} />
       <Title>{metadata.name}</Title>
-      <p style={{ textAlign: "center" }}>{metadata.description}</p>
       <NumberOfProducts>{products.length} products</NumberOfProducts>
       <GridContainer>
         {products.map(product => (
@@ -86,6 +87,8 @@ export const ProductListingPage = ({ data }) => {
                 alt="product"
                 style={{
                   maxWidth: "100%",
+                  display: "block",
+                  margin: "0 auto",
                 }}
                 loading="lazy"
                 // height="197"
@@ -117,7 +120,6 @@ export const query = graphql`
           name
           metaDescription
           metaTitle
-          description
         }
         products(first: 250) {
           edges {

@@ -5,7 +5,13 @@
  */
 const path = require(`path`)
 
-const tags = ["sofas-and-armchairs/3-seater-sofas"]
+const tags = [
+  "chairs/armchairs",
+  "sofas-and-armchairs/2-seater-sofas",
+  "sofas-and-armchairs/3-seater-sofas",
+  "sofas-and-armchairs/4-seater-sofas",
+  "sofas-and-armchairs/sofas",
+]
 
 exports.onCreateNode = ({ node }) => {
   // console.log(node.internal.type)

@@ -40,8 +40,24 @@ const Sidebar = ({ modalIsOpen, closeModal }) => {
             <MenuTitleContainer>
               <MenuTitle>MENU</MenuTitle>
             </MenuTitleContainer>
+            <MenuItemContainer to="/chairs/armchairs">
+              <MenuItem>Armchairs</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer to="/sofas-and-armchairs/2-seater-sofas">
+              <MenuItem>Small and 2 Seater Sofas</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
             <MenuItemContainer to="/sofas-and-armchairs/3-seater-sofas">
-              <MenuItem>SOFAS</MenuItem>
+              <MenuItem>3 Seater Sofas</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer to="/sofas-and-armchairs/4-seater-sofas">
+              <MenuItem>4 Seater Sofas</MenuItem>
+              <Icon characterCode={"e901"} />
+            </MenuItemContainer>
+            <MenuItemContainer to="/sofas-and-armchairs/sofas">
+              <MenuItem>All Sofas</MenuItem>
               <Icon characterCode={"e901"} />
             </MenuItemContainer>
 

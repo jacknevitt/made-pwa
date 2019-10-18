@@ -67,6 +67,7 @@ export const MenuItem = styled.span`
   font-family: "Meridian-Regular";
   font-size: 14px;
   text-decoration: none;
+  text-transform: uppercase;
   &:visited {
     text-decoration: none;
     color: black;
