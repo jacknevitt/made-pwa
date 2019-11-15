@@ -49,8 +49,21 @@ export const GatsbyQuery = graphql`
             body {
               ... on PrismicHomepageBodyHpCarousel {
                 items {
+                  hp_carousel_item_image {
+                    url
+                    alt
+                    dimensions {
+                      width
+                      height
+                    }
+                  }
                   hp_carousel_item_image_mobile {
                     url
+                    alt
+                    dimensions {
+                      width
+                      height
+                    }
                   }
                   hp_carousel_item_subtitle {
                     text
@@ -64,6 +77,7 @@ export const GatsbyQuery = graphql`
                   hp_item_text_cta {
                     text
                   }
+                  hp_carousel_text_color
                 }
               }
               ... on PrismicHomepageBodyHpProductsSlider {
