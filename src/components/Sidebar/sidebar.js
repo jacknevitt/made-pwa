@@ -24,14 +24,12 @@ const Sidebar = ({ modalIsOpen, closeModal }) => {
   return (
     <PoseGroup>
       {modalIsOpen && [
-        <PosedMenuModalContainer
-          className={modalIsOpen ? "open" : "closed"}
-          key="modal"
-        >
+        <PosedMenuModalContainer key="modal" data-cy="sidebar">
           <MenuCloseButton
             onClick={closeModal}
             modalIsOpen={modalIsOpen}
             characterCode={modalIsOpen ? "e905" : "e903"}
+            data-cy="sidebar-close-button"
           />
           <div
             style={{ overflowY: "auto", maxHeight: "100vh" }}
@@ -154,7 +152,11 @@ const Sidebar = ({ modalIsOpen, closeModal }) => {
             </MenuItemContainer>
           </div>
         </PosedMenuModalContainer>,
-        <PosedGreyOverlay key="ovelay" onClick={closeModal} />,
+        <PosedGreyOverlay
+          key="ovelay"
+          onClick={closeModal}
+          data-cy="sidebar-overlay"
+        />,
       ]}
     </PoseGroup>
   )

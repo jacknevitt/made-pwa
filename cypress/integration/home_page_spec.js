@@ -4,8 +4,18 @@ describe("The Home Page", function() {
     cy.visit("http://localhost:9000")
   })
 
-  it("opens the sidebar", function() {
-    cy.get('button[data-cy="sidebar-control"]').click()
-    // cy.get("[class]")
+  it("opens and closes the sidebar", function() {
+    cy.get('[data-cy="sidebar-control"]').click()
+    cy.get('[data-cy="sidebar"]')
+      .find('[data-cy="sidebar-close-button"]')
+      .click()
+  })
+
+  it("navitgate from the sidebar", function() {
+    cy.get('[data-cy="sidebar-control"]').click()
+    cy.get('[data-cy="sidebar"]')
+      .find('[href="/chairs/armchairs"]')
+      .click()
+    cy.url().should("include", "/chairs/armchairs")
   })
 })

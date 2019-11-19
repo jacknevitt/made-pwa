@@ -23,7 +23,7 @@ font-size: 1em;
 &:before {
   font-size: 1em;
   line-height: 1em;
-  content: '\\${p => p.characterCode}';
+  content: '\\${({ characterCode }) => characterCode || ""}';
 }
 `
 
