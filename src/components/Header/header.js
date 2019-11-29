@@ -37,6 +37,7 @@ class Header extends React.Component {
               fontSize: "26px",
             }}
             aria-label="Open side menu"
+            data-cy="sidebar-control"
           >
             <Icon characterCode="e903"></Icon>
           </button>
