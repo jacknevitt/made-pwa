@@ -75,6 +75,11 @@ export const GatsbyQuery = graphql`
                 }
               }
               ... on PrismicHomepageBodyHpProductsSlider {
+                primary {
+                  title {
+                    text
+                  }
+                }
                 items {
                   display_name
                   sku

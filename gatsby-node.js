@@ -17,6 +17,8 @@ exports.onCreateNode = ({ node }) => {
   // console.log(node.internal.type)
 }
 
+exports.onCreatePage = ({ page, actions }) => {}
+
 exports.createPages = async ({ actions, graphql }) => {
   tags.forEach(tag => {
     actions.createPage({
@@ -35,20 +37,6 @@ exports.createPages = async ({ actions, graphql }) => {
           products(first: 250) {
             edges {
               node {
-                images {
-                  lifestyleImage
-                  listingImage
-                }
-                name
-                price {
-                  includingTax
-                }
-                promotion {
-                  price {
-                    includingTax
-                  }
-                }
-                sku
                 url
               }
             }
