@@ -22,25 +22,16 @@ const StyledContainer = styled.div`
 `
 
 const PrismicCarousel = ({ items }) => {
-  console.log(items)
+  const handleScroll = event => {
+    // console.log(event.target.scrollLeft)
+  }
   return (
     <Container>
-      <Rail
-        style={
-          {
-            // width: `${items.length * 100}%`,
-          }
-        }
-      >
+      <Rail onScroll={handleScroll}>
         {items.map((item, index) => (
           <StyledContainer
             img={item.hp_carousel_item_image_mobile.url}
             key={`carousel_${index}`}
-            style={
-              {
-                // width: `${100 / items.length}%`,
-              }
-            }
           >
             <picture>
               <source
@@ -70,36 +61,35 @@ const PrismicCarousel = ({ items }) => {
 export default PrismicCarousel
 
 const TextContainer = styled.div`
-  margin: 3em;
+  margin: 30px;
   position: absolute;
   top: 0;
   color: ${props => (props.color === "black" ? "#2b2b2b" : "white")};
 `
 const TextTitle = styled.h2`
-  font-size: 46px;
-  line-height: 45px;
+  font-size: 40px;
+  line-height: 1em;
   color: inherit;
   margin: 0;
   letter-spacing: -0.3px;
 `
-const CtaText = styled.p`
-  margin-top: 10%;
-  text-decoration: underline;
+const CtaLink = styled.a`
+  margin: 1em 0;
+  text-decoration: none;
   font-size: 16px;
+  font-weight: bold;
   line-height: 24px;
-`
-
-const StyledA = styled.a`
   text-decoration: none;
   color: inherit;
-  font-size: 14px;
+  border-bottom: 2px solid currentColor;
 `
 
-const PrismicCarouselCard = ({ title, cta, link, color }) => (
+const PrismicCarouselCard = ({ title, subtitle, cta, link, color }) => (
   <TextContainer color={color}>
     <TextTitle>{title}</TextTitle>
-    <StyledA href={link}>
-      <CtaText>{cta.toUpperCase()}</CtaText>
-    </StyledA>
+    <p style={{ fontSize: "20px", margin: 0 }}>{subtitle}</p>
+    <p>
+      <CtaLink href={link}>{cta.toUpperCase()}</CtaLink>
+    </p>
   </TextContainer>
 )

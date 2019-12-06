@@ -27,7 +27,7 @@ export const SearchInputContainer = styled.div`
   flex-wrap: no-wrap;
   width: 100%;
   border: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #cfcdcd;
 `
 
 export const BasketIcon = styled(Icon)`
@@ -67,6 +67,9 @@ export const SearchInput = styled.input`
   border: none;
   &:focus {
     outline: none;
+  }
+  &::placeholder {
+    color: #cfcdcd;
   }
 `
 

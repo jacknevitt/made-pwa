@@ -6,15 +6,11 @@ import SEO from "../components/seo"
 import PrismicCarousel from "../components/PrismicCarousel"
 import PrismicProductSlider from "../components/PrismicProductSlider"
 import PrismicBrandMessage from "../components/PrismicBrandMessage"
-import InfoBar from "../components/InfoBar"
 
 const IndexPage = ({ data }) => {
   const {
     allPrismicHomepage: {
       edges: [prismicHomepageBody],
-    },
-    allPrismicInfobar: {
-      edges: [prismicInfobar],
     },
   } = data
 
@@ -23,11 +19,9 @@ const IndexPage = ({ data }) => {
     prismicHomepageBodyHpProductsSlider,
     prismicHomepageBodyHpBrandMessage,
   ] = prismicHomepageBody.node.data.body
-  const infobar = prismicInfobar.node.data.infobars[0]
   return (
     <Layout>
       <SEO title="Home" />
-      <InfoBar {...infobar} />
       <PrismicCarousel {...prismicHomepageBodyHpCarousel} />
       <PrismicProductSlider
         {...prismicHomepageBodyHpProductsSlider}
@@ -111,31 +105,6 @@ export const GatsbyQuery = graphql`
                     text
                   }
                 }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    allPrismicInfobar(filter: { lang: { eq: "en-gb" } }) {
-      edges {
-        node {
-          data {
-            infobars {
-              items {
-                href {
-                  target
-                }
-              }
-              primary {
-                text {
-                  text
-                }
-                href {
-                  url
-                }
-                countdown_end_time
               }
             }
           }
