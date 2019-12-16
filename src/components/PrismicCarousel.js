@@ -45,7 +45,6 @@ const PrismicCarousel = ({ items }) => {
               />
             </picture>
             <PrismicCarouselCard
-              color={item.hp_carousel_text_color}
               title={item.hp_carousel_item_title.text}
               subtitle={item.hp_carousel_item_subtitle.text}
               cta={item.hp_item_text_cta.text}
@@ -64,7 +63,7 @@ const TextContainer = styled.div`
   margin: 30px;
   position: absolute;
   top: 0;
-  color: ${props => (props.color === "black" ? "#2b2b2b" : "white")};
+  color: #2b2b2b;
 `
 const TextTitle = styled.h2`
   font-size: 40px;
@@ -84,8 +83,8 @@ const CtaLink = styled.a`
   border-bottom: 2px solid currentColor;
 `
 
-const PrismicCarouselCard = ({ title, subtitle, cta, link, color }) => (
-  <TextContainer color={color}>
+const PrismicCarouselCard = ({ title, subtitle, cta, link }) => (
+  <TextContainer>
     <TextTitle>{title}</TextTitle>
     <p style={{ fontSize: "20px", margin: 0 }}>{subtitle}</p>
     <p>

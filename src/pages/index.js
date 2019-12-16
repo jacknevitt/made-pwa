@@ -71,7 +71,6 @@ export const GatsbyQuery = graphql`
                   hp_item_text_cta {
                     text
                   }
-                  hp_carousel_text_color
                 }
               }
               ... on PrismicHomepageBodyHpProductsSlider {
