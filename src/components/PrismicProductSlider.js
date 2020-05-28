@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
 
 const SliderContainer = styled.div`
   display: flex;
@@ -66,6 +67,26 @@ const ProductCard = ({ title, img }) => (
 const PrismicProductSlider = props => {
   // we need to fetch product info by sku
   const { items } = props
+
+  const { elastigraph } = useStaticQuery(graphql`
+    query {
+      elastigraph {
+        productsList(
+          store: GB
+          filters: { name: SKU, values: ["CLPWAN001BRA-UK"] }
+        ) {
+          edges {
+            node {
+              url
+              name
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(props, elastigraph)
   return (
     <>
       <StyledSliderTitle>Best of the Bunch</StyledSliderTitle>
