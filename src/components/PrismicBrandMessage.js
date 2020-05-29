@@ -34,7 +34,7 @@ const PrismicBrandMessage = ({
   background_image_desktop,
 }) => (
   <Container
-    img={background_image_desktop.url}
+    img={background_image_desktop && background_image_desktop.url}
     height={background_image_desktop.dimensions.height}
     wifth={background_image_desktop.dimensions.width}
   >

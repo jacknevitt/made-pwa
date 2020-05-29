@@ -14,20 +14,27 @@ const IndexPage = ({ data }) => {
     },
   } = data
 
-  const [
-    prismicHomepageBodyHpCarousel,
-    prismicHomepageBodyHpProductsSlider,
-    prismicHomepageBodyHpBrandMessage,
-  ] = prismicHomepageBody.node.data.body
+  const {
+    PrismicHomepageBodyHpCarousel,
+    PrismicHomepageBodyHpProductsSlider,
+    PrismicHomepageBodyHpBrandMessage,
+  } = prismicHomepageBody.node.data.body.reduce(
+    (prev, curr) => ({
+      ...prev,
+      [curr.__typename]: curr,
+    }),
+    {}
+  )
+
   return (
     <Layout>
       <SEO title="Home" />
-      <PrismicCarousel {...prismicHomepageBodyHpCarousel} />
+      <PrismicCarousel {...PrismicHomepageBodyHpCarousel} />
       <PrismicProductSlider
-        {...prismicHomepageBodyHpProductsSlider}
+        {...PrismicHomepageBodyHpProductsSlider}
         {...data.elastigraph}
       />
-      <PrismicBrandMessage {...prismicHomepageBodyHpBrandMessage.primary} />
+      <PrismicBrandMessage {...PrismicHomepageBodyHpBrandMessage.primary} />
     </Layout>
   )
 }
@@ -107,26 +114,6 @@ export const GatsbyQuery = graphql`
               }
             }
           }
-        }
-      }
-    }
-
-    elastigraph {
-      products(
-        store: GB
-        skus: [
-          "SOFSCT019GRE-UK"
-          "CLPGLO024ZBR-UK"
-          "BEDSKY080BLU-UK"
-          "STOLUC008MAN-UK"
-          "DWRBUD001ZCO-UK"
-          "TBLLOM018NAT-UK"
-          "STOGUN003GRY-UK"
-          "BSPJUL004BLU-UK"
-        ]
-      ) {
-        images {
-          listingImage
         }
       }
     }

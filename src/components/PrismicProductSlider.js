@@ -75,7 +75,7 @@ const PrismicProductSlider = props => {
             <ProductCard
               key={item.sku}
               title={item.display_name}
-              img={images[index].url}
+              img={images[index] && images[index].url}
             />
           ) : null
         )}
