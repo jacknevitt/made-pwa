@@ -29,7 +29,6 @@
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
-    "cypress": "^3.6.1",
     "eslint": "^6.5.0",
     "eslint-config-react-app": "^5.0.2",
     "eslint-plugin-cypress": "^2.7.0",
