@@ -5,6 +5,33 @@
  */
 const path = require(`path`)
 
+const locales = {
+  "en-GB": {
+    store: "GB",
+    pathPrefix: "/",
+  },
+  "fr-FR": {
+    store: "FR",
+    pathPrefix: "fr",
+  },
+  "es-ES": {
+    store: "ES",
+    pathPrefix: "es",
+  },
+  "de-DE": {
+    store: "DE",
+    pathPrefix: "de",
+  },
+  "de-CH": {
+    store: "CH",
+    pathPrefix: "ch",
+  },
+  "nl-NL": {
+    store: "NL",
+    pathPrefix: "nl",
+  },
+}
+
 const tags = [
   "chairs/armchairs",
   "sofas-and-armchairs/2-seater-sofas",
@@ -18,6 +45,59 @@ exports.onCreateNode = ({ node }) => {
 }
 
 exports.createPages = async ({ actions, graphql }) => {
+  for (const [key, locale] of Object.entries(locales)) {
+    actions.createPage({
+      path: locale.pathPrefix,
+      component: path.resolve("./src/templates/HomePage.js"),
+      context: {
+        ...locale,
+        prismicLang: key.toLowerCase(),
+      },
+    })
+
+    const { data } = await graphql(
+      `
+        query($prismicLang: String) {
+          prismicTopnav(lang: { eq: $prismicLang }) {
+            data {
+              mobileLinks {
+                primary {
+                  mobile_main_category {
+                    raw {
+                      spans {
+                        data {
+                          url
+                        }
+                      }
+                      text
+                    }
+                  }
+                  main_link_background_colour
+                }
+              }
+            }
+          }
+        }
+      `,
+      { prismicLang: key.toLowerCase() }
+    )
+
+    // const mobileLinks = data.prismicTopnav.data.mobileLinks
+
+    // const mobileMainCategories = mobileLinks.map(
+    //   link => link.primary.mobile_main_category
+    // )
+
+    // const mobileMainCategoryUrls = mobileMainCategories.map(({ raw }) => ({
+    //   text: raw[0].text,
+    //   url: raw[0].spans[0]
+    //     ? raw[0].spans[0].data.url.split(/made\.com/i)[1]
+    //     : null,
+    // }))
+
+    // console.log("DATA", mobileMainCategoryUrls)
+  }
+
   tags.forEach(tag => {
     actions.createPage({
       path: tag,

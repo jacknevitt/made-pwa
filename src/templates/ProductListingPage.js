@@ -121,7 +121,7 @@ export const query = graphql`
           metaDescription
           metaTitle
         }
-        products(first: 250) {
+        products(first: 48) {
           edges {
             node {
               images {
